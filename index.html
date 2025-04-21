@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <title>Surpreenda Pet</title>
 </head>
+
 <body>
 
     <header>
@@ -17,35 +19,40 @@
 
     <main>
         <article>
-            <section >
-                <h1 class="architects-daughter-regular">Que Bom te ver Novamente!!!</p>
-                <div>
-                    <form action="">
-                        <input type="email" placeholder="teste@gmail.com">
-                        <input type="password" placeholder="Password">
-                        <a href="">Esqueceu a senha?</a>
-                        <a href="">Não tem uma conta? Criar uma</a>
-                        <input type="submit" value="Entrar" style="background-color: #FF6E40; color: white; font-size: 2rem;">
+            <section>
+                <h1 class="architects-daughter-regular">Que Bom te ver Novamente!!!</h1>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <form>
+                        <h2>Login</h2>
+                        <label for="email">Seu e-mail</label>
+                        <input type="email" id="email" placeholder="Email@exemplo.com" required>
+                    
+                        <label for="senha">Sua senha</label>
+                        <input type="password" id="senha" placeholder="Senha" required>
+                    
+                        <div class="manter-logado">
+                            <input type="checkbox" id="manter">
+                            <label for="manter">Manter-me logado</label>
+                        </div>
+                    
+                        <input type="submit" value="Logar"> <a href="telaInicial.html">teste</a>
+                    
+                        <p> Ainda não tem conta?
+                            <a href="cad.html">Cadastre-se</a>
+                        </p>
                     </form>
-                    <h2 style="color: #0077FF;">Ou continue com</h2>
-                    <div style="display: flex; justify-content: space-evenly;">
-                        <div>
-                            <!-- Exemplo de ícone -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M12.479,14.265v-3.279h11.049c0.108,0.571,0.164,1.247,0.164,1.979c0,2.46-0.672,5.502-2.84,7.669C18.744,22.829,16.051,24,12.483,24C5.869,24,0.308,18.613,0.308,12S5.869,0,12.483,0c3.659,0,6.265,1.436,8.223,3.307L18.392,5.62c-1.404-1.317-3.307-2.341-5.913-2.341C7.65,3.279,3.873,7.171,3.873,12s3.777,8.721,8.606,8.721c3.132,0,4.916-1.258,6.059-2.401c0.927-0.927,1.537-2.251,1.777-4.059L12.479,14.265z"/></svg>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"/></svg>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z"/></svg>
-                        </div>
-                    </div>
+                    
                 </div>
+                
             </section>
         </article>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
 
 </body>
+
 </html>

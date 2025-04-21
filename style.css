@@ -1,59 +1,97 @@
 * {
     margin: 0;
     padding: 0;
-    box-shadow: none;
+    box-sizing: border-box;
 }
 
-main {
+body {
+    font-family: Arial, sans-serif;
     background-color: #F2E8CF;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin-bottom: 4rem;
+}
+form input {
+    border: 3px solid #ff6550;
+}
 h1 {
     text-align: center;
     margin-top: 6rem;
     color: #00BCD4;
-    font-size: 60px;
+    font-size: 45px;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    padding-top: 7rem;
-}
-
-form {
-    background-color: white;
-    padding: 3rem 5rem; /* Ajuste o padding */
-    border-radius: 4rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Para dar um destaque */
-}
-
-form input {
-    border: 3px solid #ff6550;
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-    padding: 1rem;
-    font-size: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input::placeholder {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-}
-
-form a {
-    font-size: 1.5rem;
+form h2 {
     text-align: center;
-    display: block;
-    margin-top: 1rem;
-    text-decoration: none;
+    margin-bottom: 1.5rem;
     color: #00BCD4;
 }
 
-form a:hover {
-    color: #FF6E40;
+form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ff6550;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.manter-logado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.manter-logado input {
+    margin-right: 0.5rem;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff6550;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e15846;
+}
+
+form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+form a {
+    color:  #ff6550;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
 }
 
 .architects-daughter-regular {

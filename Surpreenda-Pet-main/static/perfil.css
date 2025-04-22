@@ -1,0 +1,46 @@
+body {
+    background-color: #F2E8CF;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+}
+
+.profile-container {
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #FF6550;
+}
+
+h4 {
+    color: #00BCD4;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #4CA773;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #3b855b;
+}
+
+.btn-danger {
+    background-color: #a63829
+}
+
+.list-group-item strong {
+    color: #FF6550;
+}
+
+a, a:hover {
+    color: #a63829;
+}

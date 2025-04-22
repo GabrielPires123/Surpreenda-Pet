@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cad.css') }}">
+</head>
+<body>
+
+<section class="cadastro-box">
+    <a href="{{ url_for('login') }}" style="display: flex;">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M17.921,1.505a1.5,1.5,0,0,1-.44,1.06L9.809,10.237a2.5,2.5,0,0,0,0,3.536l7.662,7.662a1.5,1.5,0,0,1-2.121,2.121L7.688,15.9a5.506,5.506,0,0,1,0-7.779L15.36.444a1.5,1.5,0,0,1,2.561,1.061Z"/>
+        </svg>
+    </a>
+
+    <h2>CADASTRE-SE AQUI</h2>
+
+    <form method="POST">
+        <input type="text" name="nome" placeholder="Nome completo" required>
+        <input type="email" name="email" placeholder="Email@exemplo.com" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+
+        <button type="submit">CADASTRAR</button>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <p style="color: {{ 'green' if category == 'success' else 'red' }}">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
+</body>
+</html>

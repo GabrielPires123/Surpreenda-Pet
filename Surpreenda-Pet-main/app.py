@@ -18,6 +18,7 @@ class Usuario(db.Model):
 # Cadastro
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
+    
     if request.method == 'POST':
         nome = request.form['nome']
         email = request.form['email']
@@ -34,26 +35,27 @@ def cadastro():
 
     return render_template('cadastro.html')
 
-# Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form['email']
         senha = request.form['senha']
 
-        usuario = Usuario.query.filter_by(email=email, senha=senha).first()
-        if usuario:
+        usuario = Usuario.query.filter_by(email=email).first()
+
+        if usuario and usuario.senha == senha:
             session['usuario_id'] = usuario.id
             flash('Login realizado com sucesso!', 'success')
             return redirect(url_for('perfil'))
         else:
-            flash('E-mail ou senha inválidos.', 'error')
+            flash('E-mail ou senha incorretos.', 'error')
 
     return render_template('login.html')
 
 # Perfil com edição
 @app.route('/perfil', methods=['GET', 'POST'])
 def perfil():
+    
     if 'usuario_id' not in session:
         return redirect(url_for('login'))
 
@@ -86,14 +88,6 @@ def logout():
     flash("Você saiu da conta.", "success")
     return redirect(url_for('login'))
 
-# Listar usuários (admin)
-@app.route('/admin/usuarios')
-def listar_usuarios():
-    if 'usuario_id' not in session:
-        return redirect(url_for('login'))
-
-    usuarios = Usuario.query.all()
-    return render_template('admin/usuarios.html', usuarios=usuarios)
 
 # Criar banco e rodar app
 if __name__ == '__main__':

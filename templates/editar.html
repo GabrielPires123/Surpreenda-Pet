@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabutre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <h1>Tarefas</h1>
+    </header>
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="editar">Editar</a>
+        <a href="cadastrar">Cadastrar</a>
+        <a href="excluir">Excluir</a>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <div class="card">
+                <h1 style="margin-bottom: 2rem; color: #2d3436;">Editar Tarefa</h1>
+                
+                
+                {% if not mostrar_form %}
+                <form method="POST">
+                    <div class="form-group">
+                        <label class="form-label" for="id">ID da Tarefa</label>
+                        <input type="number" id="id" name="id" class="form-input"
+                            placeholder="Digite o ID da tarefa" required>
+                    </div>
+        
+                    <div class="form-actions">
+                        <button type="submit" name="consultar" class="btn-primary">
+                            🔍 Consultar Tarefa
+                        </button>
+                        <a href="{{ url_for('homepage') }}" class="btn-secondary">
+                            ↩︎ Voltar
+                        </a>
+                    </div>
+        
+                    {% if error %}
+                    <div class="error-message" style="color: red; margin-top: 1rem;">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                </form>
+        
+                
+                {% else %}
+                <form method="POST">
+                    <input type="hidden" name="id" value="{{ tarefa.id }}">
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="titulo">Título da Tarefa</label>
+                        <input type="text" id="titulo" name="titulo" class="form-input"
+                            value="{{ tarefa.titulo }}" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label class="form-label" for="descricao">Descrição Detalhada</label>
+                        <textarea id="descricao" name="descricao" class="form-input form-textarea"
+                            required>{{ tarefa.descricao }}</textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <label class="form-label" for="data_vencimento">Nova Data Limite</label>
+                        <input type="date" id="data_vencimento" name="data_vencimento" 
+                            class="form-input" value="{{ tarefa.data_vencimento }}" required>
+                    </div>
+        
+                    <div class="form-actions">
+                        <button type="submit" name="salvar" class="btn-primary">
+                            💾 Salvar Alterações
+                        </button>
+                        <a href="{{ url_for('editarpage') }}" class="btn-secondary">
+                            ↩︎ Cancelar
+                        </a>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2025. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

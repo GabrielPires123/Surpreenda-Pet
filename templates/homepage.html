@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabutre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='tela.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <h1>Tarefas</h1>
+    </header>
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="editar">Editar</a>
+        <a href="cadastrar">Cadastrar</a>
+        <a href="excluir">Excluir</a>
+    </nav>
+
+    <main>
+        <main>
+            {% for tarefa in tarefas %}
+            <div class="card">
+                <h3 style="display: inline;">{{ tarefa.titulo }}</h3> <span>ID: {{ tarefa.id }}</span>
+
+
+                <p>{{ tarefa.descricao }}</p>
+                <br>
+                <small>Data de Vencimento: {{ tarefa.data_vencimento }}</small>
+            </div>
+            {% endfor %}
+        </main>
+    </main>
+
+    <footer>
+        © 2025. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

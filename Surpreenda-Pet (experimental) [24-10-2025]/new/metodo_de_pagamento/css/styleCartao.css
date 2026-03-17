@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2E8CF;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin-bottom: 4rem;
+}
+form input {
+    border: 3px solid #ff6550;
+}
+h1 {
+    text-align: center;
+    margin-top: 6rem;
+    color: #00BCD4;
+    font-size: 45px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00BCD4;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.0rem;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #8AC0FF;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.espaco_1 {
+    margin-bottom: 1rem;
+}
+
+.espaco_2 {
+    margin-bottom: 4.0rem;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #039132;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+form input[type="submit"]:hover {
+    background-color: #006a23;
+}
+
+#botao_cancelar {
+    width: 250px;
+    padding: 0.8rem;
+    background-color: #ED3131;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: -8.0em;
+    display: flex;
+    transition: 250ms;
+}
+
+#botao_cancelar:hover {
+    background-color: #921818;
+}
+
+form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+form a {
+    color:  #ff6550;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.architects-daughter-regular {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 3.5em;
+}
+
+.form_font_color{
+    font-family: "IBM Plex Serif";
+    font-weight: bold;
+    color: #676767;
+    font-size: 20px;
+}

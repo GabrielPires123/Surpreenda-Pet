@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../metodo_de_pagamento/css/styleCartao.css">
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../static/img/favicon.ico" />
+
+    <title>Surpreenda Pet - Pagamento Cartão</title>
+</head>
+<body>
+
+    <main>
+        <article>
+            <section>
+                <h1 class="architects-daughter-regular">Cartão</h1>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                          <div class="alert alert-{{ category }}"></div>
+
+                    <form action="../templates/login.html" method="POST">
+                        <a href="../metodo_de_pagamento/index.html" class="mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24"
+                                width="20" height="20">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </a>
+                        <label for="nome_cartao"><div class="form_font_color">Nome do cartão *</div></label>
+                        <input type="text" name="nome_cartao" id="nome_cartao" placeholder="Nome do Cartão"  maxlength="30" required>
+                    
+                        <label for="numero_cartao"><div class="form_font_color">Numero do cartão *</div></label>
+                        <input type="text" name="numero_cartao" id="numero_cartao" placeholder="Numero do Cartão" maxlength="16" required>
+
+                        <label for="senha_cartao"><div class="form_font_color">Senha *</div></label>
+                        <input type="password" name="senha_cartao" id="senha_cartao" placeholder="Senha" maxlength="20" required>
+
+                        <label for="cpf"><div class="form_font_color">CPF *</div></label>
+                        <input type="text" name="cpf" id="cpf" placeholder="XXXXXXXXXXX" maxlength="11" required>
+
+                        <div class="espaco_1"></div>
+                    
+                        <input type="submit" value="Efetuar Compra">
+
+                        <div class="espaco_2"></div>
+
+                        
+                    
+                    </form>
+                    <a href="../metodo_de_pagamento/index.html" style="text-decoration: none;"><button id="botao_cancelar">&emsp;&emsp;&emsp;&emsp;&nbsp;Cancelar&emsp;&emsp;&emsp;&emsp;</button></a>
+                </div>
+            </section>
+        </article>
+    </main>
+       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../metodo_de_pagamento/config/js/pagamento/pagamento.js"></script>
+</body>
+</html>

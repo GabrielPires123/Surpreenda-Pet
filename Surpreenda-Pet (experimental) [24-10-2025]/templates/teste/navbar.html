@@ -1,0 +1,85 @@
+<head>
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            padding: 10px 14px;
+            background: var(--sidebar-color);
+            transition: var(--tran-05);
+            z-index: 100;
+            /* Adicione estas propriedades: */
+            opacity: 1 !important;
+            background-color: #FFF !important;
+            /* Ou qualquer cor sólida que desejar */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar.close {
+            width: 88px;
+            /* Mantenha a opacidade mesmo quando fechada */
+            opacity: 1 !important;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="d-flex flex-column vh-100 bg-white shadow-sm p-3 position-fixed" style="width: 200px;">
+      <!-- Logo -->
+      <a href="{{ url_for('index') }}" class="d-flex align-items-center mb-4 text-decoration-none">
+        <img src="../../static/img/logo.png" alt="Surpreenda Pet" width="32" height="32" class="me-2">
+        <span class="fs-5 fw-bold">Surpreenda Pet</span>
+      </a>
+  
+      <!-- Menu -->
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item mb-2">
+          <a href="{{ url_for('index') }}" class="nav-link text-dark d-flex align-items-center">
+            <img src="../../static/img/home.png" width="20" class="me-2" alt="Home">
+            Home
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="{{ url_for('produtos') }}" class="nav-link text-dark d-flex align-items-center">
+            <img src="../../static/img/bone.png" width="20" class="me-2" alt="Produtos">
+            Produtos
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="{{ url_for('ajuda') }}" class="nav-link text-dark d-flex align-items-center">
+            <img src="../../static/img/question.png" width="20" class="me-2" alt="Ajuda">
+            Ajuda
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="{{ url_for('perfil') }}" class="nav-link text-dark d-flex align-items-center">
+            <img src="../../static/img/user_icon.png" width="20" class="me-2" alt="Perfil">
+            Perfil
+          </a>
+        </li>
+      </ul>
+  
+      <!-- Footer / Logout -->
+      <div class="mt-auto">
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center">
+          <i class="bx bx-log-out me-2"></i> Sair
+        </a>
+        <a href="{{ url_for('login') }}" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center">
+          <i class="bx bx-log-in me-2"></i> Login
+        </a>
+      </div>
+    </nav>
+  
+
+  
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"></script>
+  </body>
+  

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2E8CF;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 400px;
+}
+
+form {
+    background-color: none;
+    padding: 6rem 3rem;
+    border-radius: 5px;
+    width: 350px;
+    margin-bottom: 65px;
+}
+form input {
+    border: 3px solid #ff6550;
+}
+h1 {
+    text-align: center;
+    margin-top: 6rem;
+    color: #00BCD4;
+    font-size: 45px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00BCD4;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+form input[type="email"] {
+    width: 150%;
+    padding: 0.7rem;
+    margin-bottom: 3rem;
+    border: 1px solid #00BCD4;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-left: -70px;
+}
+
+
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff6550;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e15846;
+}
+
+form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+form a {
+    color:  #ff6550;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.architects-daughter-regular {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.conteiner_imagem_recup_senha {
+    margin-left: -550px;
+    margin-top: 0px;
+}
+
+#conteiner_backg_imagem_recup_senha {
+    background-color: white;
+    margin-left: -700px;
+    margin-top: 0px;
+    width: 700px;
+    height: 650px;
+}

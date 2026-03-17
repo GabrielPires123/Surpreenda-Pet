@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styleLogin.css">
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico" />
+
+    <title>Surpreenda Pet - Login</title>
+</head>
+<body>
+
+    <main>
+        <article>
+            <section>
+                <h1 class="architects-daughter-regular">Que Bom te ver <br>Novamente!!!</h1>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                          <div class="alert alert-{{ category }}"></div>
+
+                    <form action="../templates/login.html" method="POST">
+
+                        <a href="../templates/index.html" class="mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24"
+                                width="20" height="20">
+                                <path
+                                    d="M7.065,7.727l-2.78,2.78L24,10.532l0,3L4.3,13.507l2.765,2.764-2.121,2.12L1.025,14.474a3.5,3.5,0,0,1,0-4.949L4.944,5.607Z" />
+                            </svg>
+                        </a>
+                        <h2>Login</h2>
+                        <label for="email">Seu e-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Email@exemplo.com" required>
+                    
+                        <label for="senha">Sua senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                    
+                        <div class="manter-logado">
+                            <input type="checkbox" id="manter">
+                            <label for="manter">Manter-me logado</label>
+                        </div>
+                    
+                        <input type="submit" value="Logar">
+                    
+                        <p> Ainda não tem conta?
+                            <a href="../templates/cadastro.html">Cadastre-se</a>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

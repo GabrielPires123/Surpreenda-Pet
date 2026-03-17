@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ produto.nome }} - PetShop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <section class="detalhes-produto">
+        <div class="produto-imagem">
+            <img src="{{ url_for('static', filename='img/' + produto.imagem) }}" alt="{{ produto.nome }}">
+        </div>
+        
+        <div class="produto-info">
+            <h2>{{ produto.nome }}</h2>
+            <p class="preco">R$ {{ produto.preco }}</p>
+            <p class="estoque">Estoque: {{ produto.estoque }}</p>
+            <p class="descricao">{{ produto.descricao }}</p>
+            
+            <form action="{{ url_for('adicionar_carrinho') }}" method="POST">
+                <input type="hidden" name="produto_id" value="{{ produto.id }}">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" value="1" min="1" max="{{ produto.estoque }}">
+                <button type="submit" class="btn">Adicionar ao Carrinho</button>
+            </form>
+        </div>
+    </section>
+    
+    {% include 'footer.html' %}
+</body>
+</html>

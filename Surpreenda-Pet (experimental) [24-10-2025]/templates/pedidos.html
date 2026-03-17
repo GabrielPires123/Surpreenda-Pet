@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meus Pedidos - PetShop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <section class="pedidos">
+        <h2>Meus Pedidos</h2>
+        
+        {% if pedidos %}
+        <div class="lista-pedidos">
+            {% for pedido in pedidos %}
+            <div class="pedido-card">
+                <div class="pedido-cabecalho">
+                    <span>Pedido #{{ pedido.id }}</span>
+                    <span>Data: {{ pedido.data_pedido.strftime('%d/%m/%Y %H:%M') }}</span>
+                    <span>Status: {{ pedido.status }}</span>
+                    <span>Total: R$ {{ pedido.total }}</span>
+                </div>
+                
+                <div class="pedido-itens">
+                    <h4>Itens:</h4>
+                    <ul>
+                        {% for item in pedido.itens %}
+                        <li>
+                            {{ item.quantidade }}x {{ item.produto.nome }} 
+                            (R$ {{ item.preco_unitario }} cada)
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>Você ainda não fez nenhum pedido.</p>
+        <a href="{{ url_for('produtos') }}" class="btn">Ver Produtos</a>
+        {% endif %}
+    </section>
+    
+    {% include 'footer.html' %}
+</body>
+</html>
